@@ -4,6 +4,7 @@ import Html exposing(..)
 
 type Msg 
     = NoOp
+    | Another
 
 type alias Model = Int
 
@@ -12,6 +13,10 @@ update msg model =
   case msg of
     NoOp ->
       ( model, Cmd.none )
+    
+    Another ->
+        ( model, Cmd.none )
+    
   
 view : Model -> Html Msg
 view model =
